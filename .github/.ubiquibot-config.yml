@@ -1,6 +1,6 @@
 plugins:
   - uses:
-    - plugin: ubiquibot/generate-vector-embeddings@development
+    - plugin: ubiquity-os-marketplace/generate-vector-embeddings@development
   - uses:
     - plugin: https://ubiquibot-command-wallet-development.ubiquity.workers.dev
   - uses:
