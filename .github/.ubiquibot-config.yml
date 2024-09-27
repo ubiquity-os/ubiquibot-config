@@ -30,7 +30,7 @@ plugins:
           setLabel: true
           fundExternalClosedIssue: false
   - uses:
-    - plugin: ubiquibot/conversation-rewards@development
+    - plugin: ubiquity-os-marketplace/conversation-rewards@development
       # we don't skip bot events so conversation rewards triggered by the bot also run
       skipBotEvents: false
       with:
@@ -121,7 +121,7 @@ plugins:
             post: true
             debug: false
   - uses:
-    - plugin: ubiquibot/user-activity-watcher@development
+    - plugin: ubiquity-os-marketplace/user-activity-watcher@development
       with:
         watch:
           optOut:
@@ -130,7 +130,7 @@ plugins:
             - staging
             - production
   - uses:
-    - plugin: ubiquibot/automated-merging@development
+    - plugin: ubiquity-os-marketplace/automated-merging@development
       with:
         approvalsRequired:
           collaborator: 1
