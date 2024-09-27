@@ -121,7 +121,7 @@ plugins:
             post: true
             debug: false
   - uses:
-    - plugin: ubiquity-os-marketplace/user-activity-watcher@development
+    - plugin: ubiquity-os-marketplace/disqualifier@development
       with:
         watch:
           optOut:
