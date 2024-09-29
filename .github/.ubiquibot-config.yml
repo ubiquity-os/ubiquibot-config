@@ -4,7 +4,7 @@ plugins:
   - uses:
     - plugin: https://ubiquibot-command-wallet-development.ubiquity.workers.dev
   - uses:
-    - plugin: https://ubiquibot-command-query-user-development.ubiquity.workers.dev
+    - plugin: https://command-query-user-development.ubiquity.workers.dev
       with:
         allowPublicQuery: true
   - uses:
