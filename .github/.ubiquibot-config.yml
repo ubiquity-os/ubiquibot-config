@@ -51,24 +51,6 @@ plugins:
                 multiplier: 3
                 rewards:
                   wordValue: 0.1
-                  html:
-                    br: 0
-                    code: 5
-                    p: 1
-                    em: 0
-                    img: 5
-                    strong: 0
-                    blockquote: 0
-                    h1: 1
-                    h2: 1
-                    h3: 1
-                    h4: 1
-                    h5: 1
-                    h6: 1
-                    a: 5
-                    li: 1
-                    td: 1
-                    hr: 0
               - role: [ ISSUE_AUTHOR ]
                 multiplier: 1
                 rewards:
