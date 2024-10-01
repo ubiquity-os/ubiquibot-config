@@ -1,3 +1,4 @@
+---
 plugins:
   - uses:
     - plugin: https://ubiquity-os-comment-vector-embeddings-development.ubiquity.workers.dev
@@ -121,6 +122,8 @@ plugins:
         taskStaleTimeoutDuration: "30 Days"
         startRequiresWallet: true # default is true
         maxConcurrentTasks:
-          admin: 100
-          member: 20
-          contributor: 5
+          admin: 3
+          member: 3
+          contributor: 3
+
+---
