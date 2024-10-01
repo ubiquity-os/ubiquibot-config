@@ -1,4 +1,3 @@
----
 plugins:
   - uses:
     - plugin: https://ubiquity-os-comment-vector-embeddings-development.ubiquity.workers.dev
@@ -32,12 +31,11 @@ plugins:
           fundExternalClosedIssue: false
   - uses:
     - plugin: ubiquity-os-marketplace/conversation-rewards@development
-      # we don't skip bot events so conversation rewards triggered by the bot also run
       skipBotEvents: false
       with:
         logLevel: "debug"
         evmNetworkId: 100
-        evmPrivateEncrypted: "gdo_iiUND1poZaibNme5oUsG1g8RDEmtI41uLgZjxW8WwxnQZb0DHkOBcISuwobxyKEyzeGQC9KzjkWXv0_OCv-kuUHy4myWNIhs4j3odyvh1XUP7pZFeuVEiASmKQBGkzlKRii5dA0liXtHnhciZQi5N8E7-cdOMbA" # https://github.com/ubiquibot/conversation-rewards/pull/111#issuecomment-2348639931
+        evmPrivateEncrypted: "gdo_iiUND1poZaibNme5oUsG1g8RDEmtI41uLgZjxW8WwxnQZb0DHkOBcISuwobxyKEyzeGQC9KzjkWXv0_OCv-kuUHy4myWNIhs4j3odyvh1XUP7pZFeuVEiASmKQBGkzlKRii5dA0liXtHnhciZQi5N8E7-cdOMbA"
         incentives:
           contentEvaluator:
             enabled: true
@@ -120,10 +118,8 @@ plugins:
       with:
         reviewDelayTolerance: "3 Days"
         taskStaleTimeoutDuration: "30 Days"
-        startRequiresWallet: true # default is true
+        startRequiresWallet: true
         maxConcurrentTasks:
           admin: 3
           member: 3
           contributor: 3
-
----
