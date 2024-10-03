@@ -121,5 +121,5 @@ plugins:
         taskStaleTimeoutDuration: "30 Days"
         startRequiresWallet: true
         maxConcurrentTasks:
-          member: 2
-          contributor: 2
+          member: 1
+          contributor: 1
