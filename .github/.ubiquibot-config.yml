@@ -1,8 +1,14 @@
 plugins:
   - uses:
     - plugin: https://ubiquity-os-comment-vector-embeddings-development.ubiquity.workers.dev
+      with:
+        matchThreshold: 0.95
+        warningThreshold: 0.75
+        jobMatchingThreshold: 0.75
   - uses:
     - plugin: https://ubiquibot-command-wallet-development.ubiquity.workers.dev
+      with:
+        registerWalletWithVerification: false
   - uses:
     - plugin: https://command-query-user-development.ubiquity.workers.dev
       with:
@@ -37,7 +43,9 @@ plugins:
         logLevel: "debug"
         evmNetworkId: 100
         evmPrivateEncrypted: "gdo_iiUND1poZaibNme5oUsG1g8RDEmtI41uLgZjxW8WwxnQZb0DHkOBcISuwobxyKEyzeGQC9KzjkWXv0_OCv-kuUHy4myWNIhs4j3odyvh1XUP7pZFeuVEiASmKQBGkzlKRii5dA0liXtHnhciZQi5N8E7-cdOMbA" # https://github.com/ubiquibot/conversation-rewards/pull/111#issuecomment-2348639931
+        erc20RewardToken: "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d"
         incentives:
+          requirePriceLabel: true
           contentEvaluator: {}
           userExtractor:
             enabled: true
@@ -61,14 +69,20 @@ plugins:
                 multiplier: 0
                 rewards:
                   wordValue: 0
+            wordCountExponent: 0.85
           permitGeneration:
             enabled: true
           githubComment:
             post: true
             debug: false
+        dataCollection:
+          maxAttempts: 10
+          delayMs: 1000
   - uses:
     - plugin: ubiquity-os-marketplace/disqualifier@development
       with:
+        warning: "3.5 days"
+        disqualification: "7 days"
         watch:
           optOut:
             - ubiquibot
@@ -80,14 +94,21 @@ plugins:
       with:
         approvalsRequired:
           collaborator: 1
+          contributor: 2
         mergeTimeout:
           collaborator: "3.5 days"
+          contributor: "7 days"
         repos:
+          monitor: []
           ignore:
             - ubiquibot
             - launch-party
             - staging
             - production
+        allowedReviewerRoles:
+          - COLLABORATOR
+          - MEMBER
+          - OWNER
   - uses:
     - plugin: https://ubiquibot-command-start-stop-development.ubiquity.workers.dev
       with:
@@ -97,3 +118,9 @@ plugins:
         maxConcurrentTasks:
           member: 2
           contributor: 2
+        emptyWalletText: "Please set your wallet address with the /wallet command first and try again."
+        rolesWithReviewAuthority:
+          - COLLABORATOR
+          - OWNER
+          - MEMBER
+          - ADMIN
