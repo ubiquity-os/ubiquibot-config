@@ -42,7 +42,8 @@ plugins:
           userExtractor:
             enabled: true
             redeemTask: true
-          dataPurge: {}
+          dataPurge:
+            enabled: true
           formattingEvaluator:
             multipliers:
               - role: [ ISSUE_SPECIFICATION ]
