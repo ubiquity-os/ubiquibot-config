@@ -50,42 +50,18 @@ plugins:
                 multiplier: 3
                 rewards:
                   wordValue: 0.1
-              - role: [ ISSUE_AUTHOR ]
-                multiplier: 1
-                rewards:
-                  wordValue: 0.2
-              - role: [ ISSUE_ASSIGNEE ]
+              - role: [ ISSUE_AUTHOR, ISSUE_COLLABORATOR, PULL_COLLABORATOR ]
                 multiplier: 1
                 rewards:
                   wordValue: 0.1
-              - role: [ ISSUE_COLLABORATOR ]
-                multiplier: 1
-                rewards:
-                  wordValue: 0.1
-              - role: [ ISSUE_CONTRIBUTOR ]
+              - role: [ ISSUE_CONTRIBUTOR, PULL_CONTRIBUTOR ]
                 multiplier: 0.25
                 rewards:
                   wordValue: 0.1
-              - role: [ PULL_SPECIFICATION ]
+              - role: [ PULL_SPECIFICATION, PULL_AUTHOR, ISSUE_ASSIGNEE, PULL_ASSIGNEE ]
                 multiplier: 0
                 rewards:
                   wordValue: 0
-              - role: [ PULL_AUTHOR ]
-                multiplier: 0
-                rewards:
-                  wordValue: 0.2
-              - role: [ PULL_ASSIGNEE ]
-                multiplier: 1
-                rewards:
-                  wordValue: 0.1
-              - role: [ PULL_COLLABORATOR ]
-                multiplier: 1
-                rewards:
-                  wordValue: 0.1
-              - role: [ PULL_CONTRIBUTOR ]
-                multiplier: 0.25
-                rewards:
-                  wordValue: 0.1
           permitGeneration:
             enabled: true
           githubComment:
