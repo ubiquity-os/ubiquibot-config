@@ -38,8 +38,7 @@ plugins:
         evmNetworkId: 100
         evmPrivateEncrypted: "gdo_iiUND1poZaibNme5oUsG1g8RDEmtI41uLgZjxW8WwxnQZb0DHkOBcISuwobxyKEyzeGQC9KzjkWXv0_OCv-kuUHy4myWNIhs4j3odyvh1XUP7pZFeuVEiASmKQBGkzlKRii5dA0liXtHnhciZQi5N8E7-cdOMbA" # https://github.com/ubiquibot/conversation-rewards/pull/111#issuecomment-2348639931
         incentives:
-          contentEvaluator:
-            enabled: true
+          contentEvaluator: {}
           userExtractor:
             enabled: true
             redeemTask: true
