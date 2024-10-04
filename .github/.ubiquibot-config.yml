@@ -37,7 +37,7 @@ plugins:
           setLabel: true
           fundExternalClosedIssue: false
   - uses:
-    - plugin: ubiquity-os-marketplace/conversation-rewards@development
+    - plugin: ubiquity-os-marketplace/text-conversation-rewards@development
       skipBotEvents: false
       with:
         logLevel: "debug"
@@ -89,7 +89,7 @@ plugins:
           maxAttempts: 10
           delayMs: 1000
   - uses:
-    - plugin: ubiquity-os-marketplace/disqualifier@development
+    - plugin: ubiquity-os-marketplace/daemon-disqualifier@development
       with:
         warning: "3.5 days"
         disqualification: "7 days"
@@ -100,7 +100,7 @@ plugins:
             - staging
             - production
   - uses:
-    - plugin: ubiquity-os-marketplace/automated-merging@development
+    - plugin: ubiquity-os-marketplace/daemon-merging@development
       with:
         approvalsRequired:
           collaborator: 1
