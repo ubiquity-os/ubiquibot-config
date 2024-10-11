@@ -37,7 +37,7 @@ plugins:
           setLabel: true
           fundExternalClosedIssue: false
   - uses:
-    - plugin: ubiquity-os-marketplace/text-conversation-rewards@development
+    - plugin: ubiquity-os-marketplace/text-conversation-rewards@fix/tags
       skipBotEvents: false
       with:
         logLevel: "debug"
